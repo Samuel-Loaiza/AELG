@@ -19,9 +19,9 @@ class Button:
 
 # Creación de los botones del juego
 print("Inicializando botones...")
-StartButton = Button("JUGAR!", 650, 125, 315, 100, button_image_path, FONT9, 15, BROWN)
-Creditsbutton = Button("Creditos", 650, 199, 315, 100, button_image_path, FONT9, 15, BROWN)
-ExitButton = Button("Salir", 650, 275, 315, 100, button_image_path, FONT9, 15, BROWN)
+StartButton = Button("JUGAR!", 800, 125, 315, 100, button_image_path, FONT9, 15, BROWN)
+Creditsbutton = Button("Creditos", 800, 199, 315, 100, button_image_path, FONT9, 15, BROWN)
+ExitButton = Button("Salir", 800, 275, 315, 100, button_image_path, FONT9, 15, BROWN)
 BackButton = Button("←", 10, 10, 150, 75, button_image_path, FONT9, 20, BROWN)
 
 def viewButtons():
