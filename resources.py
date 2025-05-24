@@ -8,9 +8,10 @@ FPS = 30
 
 CLOCK = pygame.time.Clock()
 
-window = pygame.display.set_mode((1024, 600))
+window = pygame.display.set_mode((1225, 650), pygame.RESIZABLE)
 
 pygame.display.set_caption('Aprendizaje en la Granja')
+#pygame.display.set_icon(pygame.image.load('./images/icon.png'))
 
 WINDOW_WIDTH, WINDOW_HIGH = size = window.get_size()
 
@@ -150,15 +151,15 @@ def CreditsWindow(background, text):
 def LoadButtonImage(button):
     return loadImage(button.image)
 
-def drawButton(button):
+def DrawButton(button):
     button_image = loadImage(button.image)
     is_hovered = IsMouseHovering(button)
     set_x, set_y, set_width, set_height = GetButtonDimensions(button, is_hovered)
     button_image = pygame.transform.scale(button_image, (set_width, set_height))
     window.blit(button_image, (set_x, set_y))
-    drawButtonText(button, set_x, set_y, set_width, set_height)
+    DrawButtonText(button, set_x, set_y, set_width, set_height)
 
-def drawButtonText(button, set_x, set_y, set_width, set_height):
+def DrawButtonText(button, set_x, set_y, set_width, set_height):
     tipeletter = loadFont('./fonts/' + button.font, button.size)
     text_center = (set_x + set_width // 2, set_y + set_height // 2)
     DrawTextWithBorder(button.text, tipeletter, button.text_color, button.border_color, 1.5, text_center)
@@ -167,5 +168,8 @@ def MainButtonCore(button):
     button_image = LoadButtonImage(button)
     is_hovered = IsMouseHovering(button)
     set_x, set_y, set_width, set_height = GetButtonDimensions(button, is_hovered)
-    drawButton(button_image, set_x, set_y, set_width, set_height)
-    drawButtonText(button, set_x, set_y, set_width, set_height)
+    (button_image, set_x, set_y, set_width, set_height)
+    DrawButtonText(button, set_x, set_y, set_width, set_height)
+
+def Elements(x, y, ancho, alto):
+    return pygame.Rect(x, y, ancho, alto)

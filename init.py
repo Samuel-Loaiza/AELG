@@ -2,6 +2,8 @@ import pygame, sys
 from resources import *
 from window import *
 from button import *
+from player import *
+from level import *
 
 # Variable global para controlar la pantalla actual
 Current_Screen = "main"
@@ -41,6 +43,8 @@ def GameLoop():
     # Manejamos la pantalla de inicio del juego
     elif Current_Screen == "start_game":
         start_game_window.render()
+        MotionPlayer()
+        DrawElements()
         if PressButton(BackButton, GameResources.EVENTS):
             print("Regresando a 'main'")
             Current_Screen = "main"

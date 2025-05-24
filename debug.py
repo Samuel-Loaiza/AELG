@@ -43,5 +43,6 @@ def Debuglog():
         else:
             print(f"ERROR: Pantalla no reconocida: '{Current_Screen}'")
             Current_Screen = "main"
-    else:
-        print("Modo de depuración desactivado")
+
+if DEBUG_MODE == False:
+    print("Modo de depuración desactivado")

@@ -27,11 +27,11 @@ BackButton = Button("←", 10, 10, 150, 75, button_image_path, FONT9, 20, BROWN)
 def viewButtons():
     if DEBUG_MODE:
         print("> Mostrando botones principales")
-    drawButton(StartButton)
-    drawButton(Creditsbutton)
-    drawButton(ExitButton)
+    DrawButton(StartButton)
+    DrawButton(Creditsbutton)
+    DrawButton(ExitButton)
 
 def viewBackButton():
     if DEBUG_MODE:
         print("> Mostrando botón de regreso")
-    drawButton(BackButton)
+    DrawButton(BackButton)
